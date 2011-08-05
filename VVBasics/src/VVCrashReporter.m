@@ -162,7 +162,7 @@
 		foundServer = SCNetworkCheckReachabilityByName([domainString UTF8String],&status);
 		BOOL						reachable = NO;
 		reachable = foundServer && (status & kSCNetworkFlagsReachable) && !(status & kSCNetworkFlagsConnectionRequired);
-	#elif (defined(MAC_OS_X_VERSION_MIN_REQUIRED)(MAC_OS_X_VERSION_MIN_REQUIREDD >= 1060))
+	#elif (defined(MAC_OS_X_VERSION_MIN_REQUIRED) && (MAC_OS_X_VERSION_MIN_REQUIRED >= 1060))
 		//	this has to execute if i'm compiling against 10.6
 		SCNetworkReachabilityRef	target;
 		SCNetworkConnectionFlags	flags = 0;
