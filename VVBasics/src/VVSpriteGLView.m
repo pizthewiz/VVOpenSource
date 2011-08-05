@@ -142,7 +142,7 @@
 }
 - (void) removeFromSuperview	{
 	pthread_mutex_lock(&glLock);
-	[(id)super removeFromSuperview];
+	[super removeFromSuperview];
 	pthread_mutex_unlock(&glLock);
 }
 /*
